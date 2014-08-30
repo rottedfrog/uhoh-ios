@@ -31,6 +31,12 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeQ-5o-5L3">
+                                <rect key="frame" x="115" y="456" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -40,6 +46,7 @@
                         <size key="landscapeSize" width="568" height="320"/>
                     </simulatedScreenMetrics>
                     <connections>
+                        <outlet property="curLocation" destination="KeQ-5o-5L3" id="bQK-Je-6Jh"/>
                         <outlet property="panicButton" destination="aJu-DW-ISz" id="Z6f-ZG-wIH"/>
                         <outlet property="worryButton" destination="rfL-75-neR" id="Q1B-0X-VVs"/>
                     </connections>
