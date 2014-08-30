@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		792DAF6719B2257C00969CBB /* question_shield-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6519B2257C00969CBB /* question_shield-26.png */; };
 		792DAF6D19B22F2700969CBB /* Call friends.svg in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6919B22F2700969CBB /* Call friends.svg */; };
 		792DAF6E19B22F2700969CBB /* Close call.svg in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6A19B22F2700969CBB /* Close call.svg */; };
 		792DAF6F19B22F2700969CBB /* Info settings.svg in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6B19B22F2700969CBB /* Info settings.svg */; };
@@ -34,7 +33,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		792DAF6519B2257C00969CBB /* question_shield-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "question_shield-26.png"; path = "../../../../Pictures/question_shield-26.png"; sourceTree = "<group>"; };
 		792DAF6919B22F2700969CBB /* Call friends.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Call friends.svg"; sourceTree = "<group>"; };
 		792DAF6A19B22F2700969CBB /* Close call.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Close call.svg"; sourceTree = "<group>"; };
 		792DAF6B19B22F2700969CBB /* Info settings.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Info settings.svg"; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 				792DAF6A19B22F2700969CBB /* Close call.svg */,
 				792DAF6B19B22F2700969CBB /* Info settings.svg */,
 				792DAF6C19B22F2700969CBB /* Pre-recorded.svg */,
-				792DAF6519B2257C00969CBB /* question_shield-26.png */,
 				7933DE5019B21C6B00CE303A /* Supporting Files */,
 			);
 			path = "Uh oh!";
@@ -218,7 +215,6 @@
 			files = (
 				792DAF6E19B22F2700969CBB /* Close call.svg in Resources */,
 				792DAF7619B2312A00969CBB /* Close call.png in Resources */,
-				792DAF6719B2257C00969CBB /* question_shield-26.png in Resources */,
 				792DAF7019B22F2700969CBB /* Pre-recorded.svg in Resources */,
 				7933DE5819B21C6B00CE303A /* Main.storyboard in Resources */,
 				7933DE5A19B21C6B00CE303A /* Images.xcassets in Resources */,
