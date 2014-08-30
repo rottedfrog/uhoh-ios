@@ -22,7 +22,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
     }
     
@@ -40,6 +39,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         var speaker = AVSpeechSynthesizer()
         var utterance = AVSpeechUtterance(string: "Look at you hacker, a p-p-pathetic creature of meat and bone, panting and sweating as you run through my corridors.")
         speaker.speakUtterance(utterance)
+    
     }
     
     
