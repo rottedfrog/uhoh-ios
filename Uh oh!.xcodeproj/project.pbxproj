@@ -8,7 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		792DAF6719B2257C00969CBB /* question_shield-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6519B2257C00969CBB /* question_shield-26.png */; };
-		792DAF6819B2257C00969CBB /* warning_shield-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6619B2257C00969CBB /* warning_shield-26.png */; };
+		792DAF6D19B22F2700969CBB /* Call friends.svg in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6919B22F2700969CBB /* Call friends.svg */; };
+		792DAF6E19B22F2700969CBB /* Close call.svg in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6A19B22F2700969CBB /* Close call.svg */; };
+		792DAF6F19B22F2700969CBB /* Info settings.svg in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6B19B22F2700969CBB /* Info settings.svg */; };
+		792DAF7019B22F2700969CBB /* Pre-recorded.svg in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6C19B22F2700969CBB /* Pre-recorded.svg */; };
+		792DAF7519B2312A00969CBB /* Call friends.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF7119B2312A00969CBB /* Call friends.png */; };
+		792DAF7619B2312A00969CBB /* Close call.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF7219B2312A00969CBB /* Close call.png */; };
+		792DAF7719B2312A00969CBB /* Info settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF7319B2312A00969CBB /* Info settings.png */; };
+		792DAF7819B2312A00969CBB /* Pre-recorded.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF7419B2312A00969CBB /* Pre-recorded.png */; };
 		7933DE5319B21C6B00CE303A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7933DE5219B21C6B00CE303A /* AppDelegate.swift */; };
 		7933DE5519B21C6B00CE303A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7933DE5419B21C6B00CE303A /* ViewController.swift */; };
 		7933DE5819B21C6B00CE303A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7933DE5619B21C6B00CE303A /* Main.storyboard */; };
@@ -28,7 +35,14 @@
 
 /* Begin PBXFileReference section */
 		792DAF6519B2257C00969CBB /* question_shield-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "question_shield-26.png"; path = "../../../../Pictures/question_shield-26.png"; sourceTree = "<group>"; };
-		792DAF6619B2257C00969CBB /* warning_shield-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "warning_shield-26.png"; path = "../../../../Pictures/warning_shield-26.png"; sourceTree = "<group>"; };
+		792DAF6919B22F2700969CBB /* Call friends.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Call friends.svg"; sourceTree = "<group>"; };
+		792DAF6A19B22F2700969CBB /* Close call.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Close call.svg"; sourceTree = "<group>"; };
+		792DAF6B19B22F2700969CBB /* Info settings.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Info settings.svg"; sourceTree = "<group>"; };
+		792DAF6C19B22F2700969CBB /* Pre-recorded.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Pre-recorded.svg"; sourceTree = "<group>"; };
+		792DAF7119B2312A00969CBB /* Call friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Call friends.png"; sourceTree = "<group>"; };
+		792DAF7219B2312A00969CBB /* Close call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close call.png"; sourceTree = "<group>"; };
+		792DAF7319B2312A00969CBB /* Info settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Info settings.png"; sourceTree = "<group>"; };
+		792DAF7419B2312A00969CBB /* Pre-recorded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pre-recorded.png"; sourceTree = "<group>"; };
 		7933DE4D19B21C6B00CE303A /* Uh oh!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Uh oh!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7933DE5119B21C6B00CE303A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7933DE5219B21C6B00CE303A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,8 +97,11 @@
 				7933DE5419B21C6B00CE303A /* ViewController.swift */,
 				7933DE5619B21C6B00CE303A /* Main.storyboard */,
 				7933DE5919B21C6B00CE303A /* Images.xcassets */,
+				792DAF6919B22F2700969CBB /* Call friends.svg */,
+				792DAF6A19B22F2700969CBB /* Close call.svg */,
+				792DAF6B19B22F2700969CBB /* Info settings.svg */,
+				792DAF6C19B22F2700969CBB /* Pre-recorded.svg */,
 				792DAF6519B2257C00969CBB /* question_shield-26.png */,
-				792DAF6619B2257C00969CBB /* warning_shield-26.png */,
 				7933DE5019B21C6B00CE303A /* Supporting Files */,
 			);
 			path = "Uh oh!";
@@ -93,6 +110,10 @@
 		7933DE5019B21C6B00CE303A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				792DAF7119B2312A00969CBB /* Call friends.png */,
+				792DAF7219B2312A00969CBB /* Close call.png */,
+				792DAF7319B2312A00969CBB /* Info settings.png */,
+				792DAF7419B2312A00969CBB /* Pre-recorded.png */,
 				7933DE5119B21C6B00CE303A /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -195,10 +216,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				792DAF6E19B22F2700969CBB /* Close call.svg in Resources */,
+				792DAF7619B2312A00969CBB /* Close call.png in Resources */,
 				792DAF6719B2257C00969CBB /* question_shield-26.png in Resources */,
+				792DAF7019B22F2700969CBB /* Pre-recorded.svg in Resources */,
 				7933DE5819B21C6B00CE303A /* Main.storyboard in Resources */,
 				7933DE5A19B21C6B00CE303A /* Images.xcassets in Resources */,
-				792DAF6819B2257C00969CBB /* warning_shield-26.png in Resources */,
+				792DAF6F19B22F2700969CBB /* Info settings.svg in Resources */,
+				792DAF7519B2312A00969CBB /* Call friends.png in Resources */,
+				792DAF7719B2312A00969CBB /* Info settings.png in Resources */,
+				792DAF6D19B22F2700969CBB /* Call friends.svg in Resources */,
+				792DAF7819B2312A00969CBB /* Pre-recorded.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

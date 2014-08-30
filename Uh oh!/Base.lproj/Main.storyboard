@@ -17,27 +17,27 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJu-DW-ISz">
-                                <rect key="frame" x="93" y="237" width="176" height="111"/>
-                                <state key="normal" image="question_shield-26.png">
+                                <rect key="frame" x="16" y="172" width="256" height="256"/>
+                                <state key="normal" image="Call friends.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfL-75-neR">
-                                <rect key="frame" x="359" y="253" width="101" height="79"/>
-                                <state key="normal" image="warning_shield-26.png">
+                                <rect key="frame" x="307" y="172" width="255" height="255"/>
+                                <state key="normal" image="Info settings.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="136"/>
         </scene>
     </scenes>
     <resources>
-        <image name="question_shield-26.png" width="26" height="26"/>
-        <image name="warning_shield-26.png" width="26" height="26"/>
+        <image name="Call friends.png" width="512" height="512"/>
+        <image name="Info settings.png" width="512" height="512"/>
     </resources>
 </document>
