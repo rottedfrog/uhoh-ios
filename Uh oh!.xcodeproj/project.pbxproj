@@ -15,6 +15,7 @@
 		792DAF7619B2312A00969CBB /* Close call.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF7219B2312A00969CBB /* Close call.png */; };
 		792DAF7719B2312A00969CBB /* Info settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF7319B2312A00969CBB /* Info settings.png */; };
 		792DAF7819B2312A00969CBB /* Pre-recorded.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF7419B2312A00969CBB /* Pre-recorded.png */; };
+		792DAF7E19B2337500969CBB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792DAF7D19B2337500969CBB /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		7933DE5319B21C6B00CE303A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7933DE5219B21C6B00CE303A /* AppDelegate.swift */; };
 		7933DE5519B21C6B00CE303A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7933DE5419B21C6B00CE303A /* ViewController.swift */; };
 		7933DE5819B21C6B00CE303A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7933DE5619B21C6B00CE303A /* Main.storyboard */; };
@@ -41,6 +42,9 @@
 		792DAF7219B2312A00969CBB /* Close call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close call.png"; sourceTree = "<group>"; };
 		792DAF7319B2312A00969CBB /* Info settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Info settings.png"; sourceTree = "<group>"; };
 		792DAF7419B2312A00969CBB /* Pre-recorded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pre-recorded.png"; sourceTree = "<group>"; };
+		792DAF7919B2331D00969CBB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		792DAF7B19B2332900969CBB /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		792DAF7D19B2337500969CBB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7933DE4D19B21C6B00CE303A /* Uh oh!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Uh oh!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7933DE5119B21C6B00CE303A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7933DE5219B21C6B00CE303A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				792DAF7E19B2337500969CBB /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +78,9 @@
 		7933DE4419B21C6A00CE303A = {
 			isa = PBXGroup;
 			children = (
+				792DAF7D19B2337500969CBB /* AVFoundation.framework */,
+				792DAF7B19B2332900969CBB /* CoreAudio.framework */,
+				792DAF7919B2331D00969CBB /* CoreTelephony.framework */,
 				7933DE4F19B21C6B00CE303A /* Uh oh! */,
 				7933DE6219B21C6B00CE303A /* Uh oh!Tests */,
 				7933DE4E19B21C6B00CE303A /* Products */,
