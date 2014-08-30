@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		390FBBD819B255360030DCC9 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 390FBBD719B255360030DCC9 /* LocalAuthentication.framework */; };
 		792DAF6D19B22F2700969CBB /* Call friends.svg in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6919B22F2700969CBB /* Call friends.svg */; };
 		792DAF6E19B22F2700969CBB /* Close call.svg in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6A19B22F2700969CBB /* Close call.svg */; };
 		792DAF6F19B22F2700969CBB /* Info settings.svg in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6B19B22F2700969CBB /* Info settings.svg */; };
@@ -22,6 +21,7 @@
 		7933DE5819B21C6B00CE303A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7933DE5619B21C6B00CE303A /* Main.storyboard */; };
 		7933DE5A19B21C6B00CE303A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7933DE5919B21C6B00CE303A /* Images.xcassets */; };
 		7933DE6619B21C6B00CE303A /* Uh_oh_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7933DE6519B21C6B00CE303A /* Uh_oh_Tests.swift */; };
+		7973E1DB19B2619C00644BA8 /* CallQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7973E1DA19B2619C00644BA8 /* CallQueue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		390FBBD719B255360030DCC9 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		792DAF6919B22F2700969CBB /* Call friends.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Call friends.svg"; sourceTree = "<group>"; };
 		792DAF6A19B22F2700969CBB /* Close call.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Close call.svg"; sourceTree = "<group>"; };
 		792DAF6B19B22F2700969CBB /* Info settings.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Info settings.svg"; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		7933DE5F19B21C6B00CE303A /* Uh oh!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Uh oh!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7933DE6419B21C6B00CE303A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7933DE6519B21C6B00CE303A /* Uh_oh_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uh_oh_Tests.swift; sourceTree = "<group>"; };
+		7973E1DA19B2619C00644BA8 /* CallQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallQueue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				390FBBD819B255360030DCC9 /* LocalAuthentication.framework in Frameworks */,
 				792DAF7E19B2337500969CBB /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,7 +80,6 @@
 		7933DE4419B21C6A00CE303A = {
 			isa = PBXGroup;
 			children = (
-				390FBBD719B255360030DCC9 /* LocalAuthentication.framework */,
 				792DAF7D19B2337500969CBB /* AVFoundation.framework */,
 				792DAF7B19B2332900969CBB /* CoreAudio.framework */,
 				792DAF7919B2331D00969CBB /* CoreTelephony.framework */,
@@ -112,6 +110,7 @@
 				792DAF6B19B22F2700969CBB /* Info settings.svg */,
 				792DAF6C19B22F2700969CBB /* Pre-recorded.svg */,
 				7933DE5019B21C6B00CE303A /* Supporting Files */,
+				7973E1DA19B2619C00644BA8 /* CallQueue.swift */,
 			);
 			path = "Uh oh!";
 			sourceTree = "<group>";
@@ -256,6 +255,7 @@
 			files = (
 				7933DE5519B21C6B00CE303A /* ViewController.swift in Sources */,
 				7933DE5319B21C6B00CE303A /* AppDelegate.swift in Sources */,
+				7973E1DB19B2619C00644BA8 /* CallQueue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +371,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "";
 				INFOPLIST_FILE = "Uh oh!/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -382,6 +383,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "";
 				INFOPLIST_FILE = "Uh oh!/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

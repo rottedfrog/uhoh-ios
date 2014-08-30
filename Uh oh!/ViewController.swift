@@ -16,7 +16,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var curLocation: UILabel!
     var locationManager:CLLocationManager!
-    
+    var callQueue = CallQueue()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager = CLLocationManager()
@@ -32,14 +33,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func MakeCall(sender: AnyObject) {
-        let phone = "tel://00447477973182";
-        let url:NSURL = NSURL.URLWithString(phone);
-        UIApplication.sharedApplication().openURL(url);
-        
-        
         var speaker = AVSpeechSynthesizer()
-        var utterance = AVSpeechUtterance(string: "Look at you hacker, a p-p-pathetic creature of meat and bone, panting and sweating as you run through my corridors.")
+        var utterance = AVSpeechUtterance(string: "I'm sorry Dave, I can't let you do that.")
         speaker.speakUtterance(utterance)
+      
+        callQueue.callQueue = ["00447477973182", "00447477973182", "00447477973182"]
+        callQueue.makeCalls()
     }
     
     
