@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		792DAF6719B2257C00969CBB /* question_shield-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6519B2257C00969CBB /* question_shield-26.png */; };
+		792DAF6819B2257C00969CBB /* warning_shield-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6619B2257C00969CBB /* warning_shield-26.png */; };
 		7933DE5319B21C6B00CE303A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7933DE5219B21C6B00CE303A /* AppDelegate.swift */; };
 		7933DE5519B21C6B00CE303A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7933DE5419B21C6B00CE303A /* ViewController.swift */; };
 		7933DE5819B21C6B00CE303A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7933DE5619B21C6B00CE303A /* Main.storyboard */; };
@@ -25,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		792DAF6519B2257C00969CBB /* question_shield-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "question_shield-26.png"; path = "../../../../Pictures/question_shield-26.png"; sourceTree = "<group>"; };
+		792DAF6619B2257C00969CBB /* warning_shield-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "warning_shield-26.png"; path = "../../../../Pictures/warning_shield-26.png"; sourceTree = "<group>"; };
 		7933DE4D19B21C6B00CE303A /* Uh oh!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Uh oh!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7933DE5119B21C6B00CE303A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7933DE5219B21C6B00CE303A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 				7933DE5419B21C6B00CE303A /* ViewController.swift */,
 				7933DE5619B21C6B00CE303A /* Main.storyboard */,
 				7933DE5919B21C6B00CE303A /* Images.xcassets */,
+				792DAF6519B2257C00969CBB /* question_shield-26.png */,
+				792DAF6619B2257C00969CBB /* warning_shield-26.png */,
 				7933DE5019B21C6B00CE303A /* Supporting Files */,
 			);
 			path = "Uh oh!";
@@ -189,8 +195,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				792DAF6719B2257C00969CBB /* question_shield-26.png in Resources */,
 				7933DE5819B21C6B00CE303A /* Main.storyboard in Resources */,
 				7933DE5A19B21C6B00CE303A /* Images.xcassets in Resources */,
+				792DAF6819B2257C00969CBB /* warning_shield-26.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +403,7 @@
 				7933DE6B19B21C6B00CE303A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7933DE6C19B21C6B00CE303A /* Build configuration list for PBXNativeTarget "Uh oh!Tests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +412,7 @@
 				7933DE6E19B21C6B00CE303A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
