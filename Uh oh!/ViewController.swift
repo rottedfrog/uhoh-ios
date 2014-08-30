@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
-                            
+  @IBOutlet var panicButton: UIButton!
+  @IBOutlet var worryButton: UIButton!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +23,10 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
-
+  @IBAction func MakeCall(sender: AnyObject) {
+    var speaker = AVSpeechSynthesizer()
+    var utterance = AVSpeechUtterance(string: "Look at you hacker, a p-p-pathetic creature of meat and bone, panting and sweating as you run through my corridors.")
+    speaker.speakUtterance(utterance)
+  }
 }
 
