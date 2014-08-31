@@ -25,6 +25,7 @@
 		7973E1DB19B2619C00644BA8 /* CallQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7973E1DA19B2619C00644BA8 /* CallQueue.swift */; };
 		7995E29B19B29D6700CE5CB7 /* Pre-recording1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7995E29919B29D6700CE5CB7 /* Pre-recording1.mp3 */; };
 		7995E29C19B29D6700CE5CB7 /* Pre-recording2 - loop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7995E29A19B29D6700CE5CB7 /* Pre-recording2 - loop.mp3 */; };
+		79BADB6319B3163900F97FD6 /* preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BADB6219B3163900F97FD6 /* preferences.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		7973E1DA19B2619C00644BA8 /* CallQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallQueue.swift; sourceTree = "<group>"; };
 		7995E29919B29D6700CE5CB7 /* Pre-recording1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Pre-recording1.mp3"; sourceTree = "<group>"; };
 		7995E29A19B29D6700CE5CB7 /* Pre-recording2 - loop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Pre-recording2 - loop.mp3"; sourceTree = "<group>"; };
+		79BADB6219B3163900F97FD6 /* preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = preferences.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +111,7 @@
 		7933DE4F19B21C6B00CE303A /* Uh oh! */ = {
 			isa = PBXGroup;
 			children = (
-				39B93EC319B316FE00453DDC /* preferences.swift */,
+				79BADB6219B3163900F97FD6 /* preferences.swift */,
 				7933DE5219B21C6B00CE303A /* AppDelegate.swift */,
 				7933DE5419B21C6B00CE303A /* ViewController.swift */,
 				7933DE5619B21C6B00CE303A /* Main.storyboard */,
@@ -262,7 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39B93EC419B316FE00453DDC /* preferences.swift in Sources */,
+				79BADB6319B3163900F97FD6 /* preferences.swift in Sources */,
 				7933DE5519B21C6B00CE303A /* ViewController.swift in Sources */,
 				39064D6519B28E4700B63C86 /* myViewController2.swift in Sources */,
 				39064D6719B2981A00B63C86 /* myTableViewController2.swift in Sources */,

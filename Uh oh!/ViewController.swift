@@ -13,7 +13,8 @@ import CoreLocation
 class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var panicButton: UIButton!
     @IBOutlet var worryButton: UIButton!
-    
+    @IBOutlet weak var worryLabel: UILabel!
+  
     var locationManager:CLLocationManager!
     var callQueue = CallQueue()
     var _inCall = false
@@ -42,6 +43,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
         _inCall = true
         worryButton.setImage(UIImage(named: "delete_message-128.png"), forState: UIControlState.Normal)
+        worryLabel.text = "I'm safe!"
         self.sendBackupData("emergency")
       
         callQueue.callQueue = ["00447477973182", "004428254224400", "00447967965870"]
@@ -61,15 +63,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
       if callQueue.isPlaying() {
         callQueue._handler.player.stop()
         worryButton.setImage(UIImage(named: "chat-128.png"), forState: UIControlState.Normal)
+        worryLabel.text = "Talk to me"
       }
       else if _inCall {
         _inCall = false
         worryButton.setImage(UIImage(named: "chat-128.png"), forState: UIControlState.Normal)
+        worryLabel.text = "Talk to me"
         self.sendBackupData("OK")
       }
       else {
         callQueue.playMP3()
         worryButton.setImage(UIImage(named: "delete_message-128.png"), forState: UIControlState.Normal)
+        worryLabel.text = "I'm safe!"
         self.sendBackupData("alert")
       }
     }
@@ -117,16 +122,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
         println("Error while updating location " + error.localizedDescription)
     }
-    
-    func sendHappyMessage() {
-      
-    }
   
-    func sendPanicMessage() {
-      
-    }
-  
-  func sendBackupData(mode: String){
+    func sendBackupData(mode: String) {
         // create the request & response
         var request = NSMutableURLRequest(URL: NSURL(string: "http://uhoh.herokuapp.com/uhoh"), cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData, timeoutInterval: 5)
         var response: NSURLResponse?

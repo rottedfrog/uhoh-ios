@@ -266,22 +266,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5oQ-xE-Abk">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5oQ-xE-Abk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1079"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">Facebook Hack
-Richard
-Benno
-
-Thank you!</string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <string key="text">About the app 
+Uh oh! was built as part of the InterTech and 
+FaceBook LGBT+ 2014 'Make Stuff Better' 
+hackathon in London.  
+ It was created in 24 hours (so there are a few feature enhancements we have yet to complete) by:  
+Benno Ommerborn  
+Joseph Finlayson 
+Louise Franklin 
+Justin King-Lacroix 
+Richard Matheson 
+Liudas Survila 
+ How it works 
+ Uh oh! is designed to help keep you safe when you might be feeling vulnerable, particularly walking home alone at night.  
+ After you first install Uh oh! go to Settings 
+where you can programme in the phone numbers of three of your friends or family who you would like to contact if you feel unsafe. The app then works by offering you two levels of service: 
+1. Talk To Me: Select the amber speech icon and be guided through a simulated conversation 
+while your GPS position is recorded, just in case something should happen. The idea of this is 
+to keep you talking and calm, making any potential unfriendlies believe you are on the 
+phone and therefore less of a target.  
+ 2. Call My Friends: Select the red call icon to directly alert and call three of your friends or family. When this option is selected the app will automatically send an sms message to all three of your listed friends and call your friends in turn until one answers. If they don't answer it will default to the Talk To Me simulated conversation.  
+Once you are feeling safe again, you will be asked to use the Cancel button in the app. This will hang - up the simulated call or, if you used the Call My Friends option, will send your friends a second sms message to confirm that you are now safe. What data gets sent when I use the app?
+Whenever you use Uh oh! your phone will send your GPS position to our central server along 
+with your phone number and the number of your friends. If you don’t select to Call My Friends, 
+nothing will be done with this individual data and 
+it will be cleansed from our database on a regular 
+basis – we do keep it for a little bit, just in cas
+e!  
+The only information we retain are the co-ordinate 
+positions where people have used the app, 
+without any other unique identifiers. We then map t
+hese on an ongoing basis to highlight areas 
+where users feel particularly vulnerable, so that t
+hey can be avoided or issues raised with local 
+authorities. </string>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -328,6 +350,18 @@ Thank you!</string>
                                     <action selector="MakeCall:" destination="vXZ-lx-hvc" eventType="touchDown" id="rmQ-Ps-agC"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Call my friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xlr-3W-2vh">
+                                <rect key="frame" x="184" y="356" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Talk to me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTC-e6-1b8">
+                                <rect key="frame" x="16" y="356" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -347,6 +381,7 @@ Thank you!</string>
                     <connections>
                         <outlet property="panicButton" destination="aJu-DW-ISz" id="Z6f-ZG-wIH"/>
                         <outlet property="worryButton" destination="rfL-75-neR" id="Q1B-0X-VVs"/>
+                        <outlet property="worryLabel" destination="LTC-e6-1b8" id="QMC-no-R9h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
