@@ -41,12 +41,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         if callQueue.isPlaying() {
           callQueue._handler.player.stop()
         }
-        _inCall = true
         worryButton.setImage(UIImage(named: "delete_message-128.png"), forState: UIControlState.Normal)
         worryLabel.text = "I'm safe"
-        self.sendBackupData("emergency")
+        if !_inCall {
+          self.sendBackupData("emergency")
+        }
+        _inCall = true
       
-        callQueue.callQueue = ["00447477973182", "004428254224400", "00447967965870"]
+        callQueue.callQueue = ["", "", ""]
         callQueue.makeCalls()
     }
     
@@ -54,7 +56,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
         if (segue.identifier == "segueTest") {
             var svc = segue!.destinationViewController as myTableViewController2;
-            //svc.pref = self.pref
+            svc.pref = self.pref
         }
     }
     
@@ -134,12 +136,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         [
             "mode": mode,
             "gpsCoords": [coordinate.latitude, coordinate.longitude,],
-            "from": ["name": "Richard", "num": "+447906553758"],
+            "from": ["name": "Richard", "num": "+44"],
             "numbersToCall":
             [
-                ["name": "Benno", "num": "+447477973182"],
-                ["name": "Liudas", "num": "+4428254224400"],
-                ["name": "Joseph", "num": "+447967965870"]
+                ["name": "Benno", "num": "+44"],
+                ["name": "Liudas", "num": "+44"],
+                ["name": "Joseph", "num": "+44"]
             ]
         ]
         func JSONStringify(jsonObj: AnyObject) -> String {
