@@ -111,6 +111,7 @@
 				7933DE5919B21C6B00CE303A /* Images.xcassets */,
 				7933DE5019B21C6B00CE303A /* Supporting Files */,
 				7973E1DA19B2619C00644BA8 /* CallQueue.swift */,
+				39064D6C19B3001B00B63C86 /* preferences.swift */,
 			);
 			path = "Uh oh!";
 			sourceTree = "<group>";
@@ -251,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39064D6D19B3001B00B63C86 /* preferences.swift in Sources */,
 				7933DE5519B21C6B00CE303A /* ViewController.swift in Sources */,
 				39064D6519B28E4700B63C86 /* myViewController2.swift in Sources */,
 				39064D6719B2981A00B63C86 /* myTableViewController2.swift in Sources */,

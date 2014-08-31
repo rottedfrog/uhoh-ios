@@ -27,7 +27,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.startUpdatingLocation()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -77,7 +76,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             
             if placemarks.count > 0 {
                 let pm = placemarks[0] as CLPlacemark
-                self.coordinate = manager.location.coordinate
+                self.pref.location = manager.location.coordinate
                 self.displayLocationInfo(pm)
             } else {
                 println("Problem with the data received from geocoder")
