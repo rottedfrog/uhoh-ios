@@ -13,6 +13,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Friend1" id="sDi-gp-ARZ">
                                 <cells>
@@ -28,7 +29,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bhD-WM-qM4" userLabel="NameFriend1">
-                                                    <rect key="frame" x="69" y="7" width="203" height="30"/>
+                                                    <rect key="frame" x="70" y="7" width="203" height="30"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Benno">
                                                             <attributes>
@@ -39,6 +40,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="update:" destination="tmb-Y0-glb" eventType="editingDidEnd" id="0RU-7B-epi"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -66,6 +70,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="update:" destination="tmb-Y0-glb" eventType="editingDidEnd" id="O6k-M5-NL2"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -97,6 +104,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="update:" destination="tmb-Y0-glb" eventType="editingDidEnd" id="Jzf-Xa-vOU"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <attributedString key="userComments">
@@ -132,6 +142,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="update:" destination="tmb-Y0-glb" eventType="editingDidEnd" id="gLs-jc-N02"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <attributedString key="userComments">
@@ -171,6 +184,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="update:" destination="tmb-Y0-glb" eventType="editingDidEnd" id="4Jf-TR-N4h"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -198,6 +214,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="update:" destination="tmb-Y0-glb" eventType="editingDidEnd" id="3mY-hE-dEX"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
