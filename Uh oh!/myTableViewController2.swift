@@ -10,6 +10,7 @@ import UIKit
 
 class myTableViewController2: UITableViewController {
 
+    
     @IBOutlet weak var phone1: UITextField!
     @IBOutlet weak var phone2: UITextField!
     @IBOutlet weak var phone3: UITextField!
@@ -18,21 +19,31 @@ class myTableViewController2: UITableViewController {
     @IBOutlet weak var name2: UITextField!
     @IBOutlet weak var name3: UITextField!
     
-    var pref:Preferences = Preferences()
+    var pref: Preferences!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        name1.text = pref.friends["name1"]
-        name2.text = pref.friends["name2"]
-        name3.text = pref.friends["name3"]
+        self.name1.text = self.pref.friends["name1"]
+        self.name2.text = self.pref.friends["name2"]
+        self.name3.text = self.pref.friends["name3"]
         
-        phone1.text = pref.friends["phone1"]
-        phone2.text = pref.friends["phone2"]
-        phone2.text = pref.friends["phone3"]
+        self.phone1.text = self.pref.friends["phone1"]
+        self.phone2.text = self.pref.friends["phone2"]
+        self.phone2.text = self.pref.friends["phone3"]
         
     }
-
+    
+    @IBAction func update(sender: AnyObject) {
+        self.pref.friends["name1"] = name1.text
+        self.pref.friends["name2"] = name2.text
+        self.pref.friends["name3"] = name3.text
+        
+        self.pref.friends["phone1"] = phone1.text
+        self.pref.friends["phone2"] = phone2.text
+        self.pref.friends["phone3"] = phone3.text
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -57,17 +68,4 @@ class myTableViewController2: UITableViewController {
         }    
     }
     
-    func viewWillDisappear ()
-    {
-        pref.friends["name1"] = name1.text
-        pref.friends["name2"] = name2.text
-        pref.friends["name3"] = name3.text
-        
-        pref.friends["phone1"] = phone1.text
-        pref.friends["phone2"] = phone2.text
-        pref.friends["phone3"] = phone3.text
-        
-    }
-
-
 }

@@ -10,6 +10,7 @@
 		39064D6519B28E4700B63C86 /* myViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39064D6419B28E4700B63C86 /* myViewController2.swift */; };
 		39064D6719B2981A00B63C86 /* myTableViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39064D6619B2981A00B63C86 /* myTableViewController2.swift */; };
 		39064D6919B2B25800B63C86 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39064D6819B2B25800B63C86 /* CoreLocation.framework */; };
+		39B93EC419B316FE00453DDC /* preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B93EC319B316FE00453DDC /* preferences.swift */; };
 		792DAF7E19B2337500969CBB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792DAF7D19B2337500969CBB /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		7933DE5319B21C6B00CE303A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7933DE5219B21C6B00CE303A /* AppDelegate.swift */; };
 		7933DE5519B21C6B00CE303A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7933DE5419B21C6B00CE303A /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 		39064D6419B28E4700B63C86 /* myViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myViewController2.swift; sourceTree = "<group>"; };
 		39064D6619B2981A00B63C86 /* myTableViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myTableViewController2.swift; sourceTree = "<group>"; };
 		39064D6819B2B25800B63C86 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		39B93EC319B316FE00453DDC /* preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = preferences.swift; sourceTree = "<group>"; };
 		792DAF7919B2331D00969CBB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		792DAF7B19B2332900969CBB /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		792DAF7D19B2337500969CBB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -103,6 +105,7 @@
 		7933DE4F19B21C6B00CE303A /* Uh oh! */ = {
 			isa = PBXGroup;
 			children = (
+				39B93EC319B316FE00453DDC /* preferences.swift */,
 				7933DE5219B21C6B00CE303A /* AppDelegate.swift */,
 				7933DE5419B21C6B00CE303A /* ViewController.swift */,
 				7933DE5619B21C6B00CE303A /* Main.storyboard */,
@@ -111,7 +114,6 @@
 				7933DE5919B21C6B00CE303A /* Images.xcassets */,
 				7933DE5019B21C6B00CE303A /* Supporting Files */,
 				7973E1DA19B2619C00644BA8 /* CallQueue.swift */,
-				39064D6C19B3001B00B63C86 /* preferences.swift */,
 			);
 			path = "Uh oh!";
 			sourceTree = "<group>";
@@ -252,7 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39064D6D19B3001B00B63C86 /* preferences.swift in Sources */,
+				39B93EC419B316FE00453DDC /* preferences.swift in Sources */,
 				7933DE5519B21C6B00CE303A /* ViewController.swift in Sources */,
 				39064D6519B28E4700B63C86 /* myViewController2.swift in Sources */,
 				39064D6719B2981A00B63C86 /* myTableViewController2.swift in Sources */,

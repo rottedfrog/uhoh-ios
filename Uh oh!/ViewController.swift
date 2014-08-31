@@ -175,6 +175,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    func tableViewControllerDidFinish(tableViewController:myTableViewController2, preferences:Preferences) {
+        pref = preferences
+    }
+    
     
 }
 
