@@ -30,8 +30,7 @@ class myTableViewController2: UITableViewController {
         
         self.phone1.text = self.pref.friends["phone1"]
         self.phone2.text = self.pref.friends["phone2"]
-        self.phone2.text = self.pref.friends["phone3"]
-        
+        self.phone3.text = self.pref.friends["phone3"]
     }
     
     @IBAction func update(sender: AnyObject) {

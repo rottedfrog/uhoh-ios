@@ -269,7 +269,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5oQ-xE-Abk">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="1079"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">About the app 
+                                <string key="text">About the app 
 Uh oh! was built as part of the InterTech and 
 FaceBook LGBT+ 2014 'Make Stuff Better' 
 hackathon in London.  
@@ -302,7 +302,7 @@ without any other unique identifiers. We then map t
 hese on an ongoing basis to highlight areas 
 where users feel particularly vulnerable, so that t
 hey can be avoided or issues raised with local 
-authorities. </mutableString>
+authorities. </string>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -350,6 +350,18 @@ authorities. </mutableString>
                                     <action selector="MakeCall:" destination="vXZ-lx-hvc" eventType="touchDown" id="rmQ-Ps-agC"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Call my friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xlr-3W-2vh">
+                                <rect key="frame" x="184" y="356" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Talk to me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTC-e6-1b8">
+                                <rect key="frame" x="16" y="356" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -369,6 +381,7 @@ authorities. </mutableString>
                     <connections>
                         <outlet property="panicButton" destination="aJu-DW-ISz" id="Z6f-ZG-wIH"/>
                         <outlet property="worryButton" destination="rfL-75-neR" id="Q1B-0X-VVs"/>
+                        <outlet property="worryLabel" destination="LTC-e6-1b8" id="QMC-no-R9h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
