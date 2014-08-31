@@ -29,8 +29,6 @@ class CallQueue
       regex.replaceMatchesInString(number, options: .allZeros, range: NSMakeRange(0, number.length), withTemplate: "")
       UIApplication.sharedApplication().openURL(NSURL.URLWithString("telprompt://" + number))
     }
-    else
-    { playMP3() }
     _current = (_current + 1) % callQueue.count
   }
   

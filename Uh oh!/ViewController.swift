@@ -14,13 +14,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var panicButton: UIButton!
     @IBOutlet var worryButton: UIButton!
     
-    @IBOutlet weak var curLocation: UILabel!
     var locationManager:CLLocationManager!
     var callQueue = CallQueue()
   
     var coordinate:CLLocationCoordinate2D!
-    var mode:String = "alert"
-    
+    var _inCall = false
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,16 +37,33 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func MakeCall(sender: AnyObject) {
         var speaker = AVSpeechSynthesizer()
-        //var utterance = AVSpeechUtterance(string: "I'm sorry Dave, I can't let you do that.")
-        //speaker.speakUtterance(utterance)
+
+        if callQueue.isPlaying() {
+          callQueue._handler.player.stop()
+        }
+        _inCall = true
+        worryButton.setImage(UIImage(named: "delete_message-128.png"), forState: UIControlState.Normal)
+        self.sendBackupData("emergency")
       
         callQueue.callQueue = ["00447477973182", "00447477973182", ""]
         callQueue.makeCalls()
     }
     
-    
     @IBAction func Worry(sender: AnyObject) {
-        self.sendBackupData()
+      if callQueue.isPlaying() {
+        callQueue._handler.player.stop()
+        worryButton.setImage(UIImage(named: "chat-128.png"), forState: UIControlState.Normal)
+      }
+      else if _inCall {
+        _inCall = false
+        worryButton.setImage(UIImage(named: "chat-128.png"), forState: UIControlState.Normal)
+        self.sendBackupData("OK")
+      }
+      else {
+        callQueue.playMP3()
+        worryButton.setImage(UIImage(named: "delete_message-128.png"), forState: UIControlState.Normal)
+        self.sendBackupData("alert")
+      }
     }
     
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
@@ -70,8 +86,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     }
     
-    
-    
     func displayLocationInfo(placemark: CLPlacemark) {
         
         //stop updating location to save battery life
@@ -90,23 +104,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         println(placemark.administrativeArea)
         println(placemark.country)
         
-        self.curLocation.text = res
     }
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
         println("Error while updating location " + error.localizedDescription)
     }
     
-    
-    func sendBackupData(){
+    func sendHappyMessage() {
+      
+    }
+  
+    func sendPanicMessage() {
+      
+    }
+  
+  func sendBackupData(mode: String){
         // create the request & response
         var request = NSMutableURLRequest(URL: NSURL(string: "http://uhoh.herokuapp.com/uhoh"), cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData, timeoutInterval: 5)
         var response: NSURLResponse?
         var error: NSError?
-        
         let jsonObject: AnyObject =
         [
-            "mode": self.mode,
+            "mode": mode,
             "gpsCoords": [self.coordinate.latitude, self.coordinate.longitude],
             "from": ["name": "Joe", "num": "+447967965870"],
             "numbersToCall":
