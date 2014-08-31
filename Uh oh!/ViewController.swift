@@ -29,10 +29,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func MakeCall(sender: AnyObject) {
         var speaker = AVSpeechSynthesizer()
-        var utterance = AVSpeechUtterance(string: "I'm sorry Dave, I can't let you do that.")
-        speaker.speakUtterance(utterance)
+        //var utterance = AVSpeechUtterance(string: "I'm sorry Dave, I can't let you do that.")
+        //speaker.speakUtterance(utterance)
       
-        callQueue.callQueue = ["00447477973182", "00447477973182", "00447477973182"]
+        callQueue.callQueue = ["00447477973182", "00447477973182", ""]
         callQueue.makeCalls()
     }
     
@@ -88,7 +88,5 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
         println("Error while updating location " + error.localizedDescription)
     }
-    
-    
 }
 

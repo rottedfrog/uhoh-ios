@@ -22,6 +22,8 @@
 		7933DE5A19B21C6B00CE303A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7933DE5919B21C6B00CE303A /* Images.xcassets */; };
 		7933DE6619B21C6B00CE303A /* Uh_oh_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7933DE6519B21C6B00CE303A /* Uh_oh_Tests.swift */; };
 		7973E1DB19B2619C00644BA8 /* CallQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7973E1DA19B2619C00644BA8 /* CallQueue.swift */; };
+		7995E29B19B29D6700CE5CB7 /* Pre-recording1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7995E29919B29D6700CE5CB7 /* Pre-recording1.mp3 */; };
+		7995E29C19B29D6700CE5CB7 /* Pre-recording2 - loop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7995E29A19B29D6700CE5CB7 /* Pre-recording2 - loop.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		7933DE6419B21C6B00CE303A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7933DE6519B21C6B00CE303A /* Uh_oh_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uh_oh_Tests.swift; sourceTree = "<group>"; };
 		7973E1DA19B2619C00644BA8 /* CallQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallQueue.swift; sourceTree = "<group>"; };
+		7995E29919B29D6700CE5CB7 /* Pre-recording1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Pre-recording1.mp3"; sourceTree = "<group>"; };
+		7995E29A19B29D6700CE5CB7 /* Pre-recording2 - loop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Pre-recording2 - loop.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 		7933DE5019B21C6B00CE303A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7995E29919B29D6700CE5CB7 /* Pre-recording1.mp3 */,
+				7995E29A19B29D6700CE5CB7 /* Pre-recording2 - loop.mp3 */,
 				792DAF7119B2312A00969CBB /* Call friends.png */,
 				792DAF7219B2312A00969CBB /* Close call.png */,
 				792DAF7319B2312A00969CBB /* Info settings.png */,
@@ -231,11 +237,13 @@
 				792DAF7019B22F2700969CBB /* Pre-recorded.svg in Resources */,
 				7933DE5819B21C6B00CE303A /* Main.storyboard in Resources */,
 				7933DE5A19B21C6B00CE303A /* Images.xcassets in Resources */,
+				7995E29C19B29D6700CE5CB7 /* Pre-recording2 - loop.mp3 in Resources */,
 				792DAF6F19B22F2700969CBB /* Info settings.svg in Resources */,
 				792DAF7519B2312A00969CBB /* Call friends.png in Resources */,
 				792DAF7719B2312A00969CBB /* Info settings.png in Resources */,
 				792DAF6D19B22F2700969CBB /* Call friends.svg in Resources */,
 				792DAF7819B2312A00969CBB /* Pre-recorded.png in Resources */,
+				7995E29B19B29D6700CE5CB7 /* Pre-recording1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
