@@ -43,7 +43,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
         _inCall = true
         worryButton.setImage(UIImage(named: "delete_message-128.png"), forState: UIControlState.Normal)
-        worryLabel.text = "I'm safe!"
+        worryLabel.text = "I'm safe"
         self.sendBackupData("emergency")
       
         callQueue.callQueue = ["00447477973182", "00447477973182", ""]
@@ -74,7 +74,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
       else {
         callQueue.playMP3()
         worryButton.setImage(UIImage(named: "delete_message-128.png"), forState: UIControlState.Normal)
-        worryLabel.text = "I'm safe!"
+        worryLabel.text = "I'm safe"
         self.sendBackupData("alert")
       }
     }
