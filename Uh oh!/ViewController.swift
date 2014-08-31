@@ -18,8 +18,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var locationManager:CLLocationManager!
     var callQueue = CallQueue()
   
-    var coordinate:CLLocationCoordinate2D!
-    var mode:String = "alert"
+    var pref:Preferences = Preferences()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +27,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.startUpdatingLocation()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,6 +41,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
       
         callQueue.callQueue = ["00447477973182", "00447477973182", ""]
         callQueue.makeCalls()
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        if (segue.identifier == "segueTest") {
+            var svc = segue!.destinationViewController as myTableViewController2;
+            svc.pref = self.pref
+        }
     }
     
     
@@ -61,7 +67,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             
             if placemarks.count > 0 {
                 let pm = placemarks[0] as CLPlacemark
-                self.coordinate = manager.location.coordinate
+                self.pref.location = manager.location.coordinate
                 self.displayLocationInfo(pm)
             } else {
                 println("Problem with the data received from geocoder")
@@ -103,11 +109,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         var request = NSMutableURLRequest(URL: NSURL(string: "http://uhoh.herokuapp.com/uhoh"), cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData, timeoutInterval: 5)
         var response: NSURLResponse?
         var error: NSError?
+        var coordinate:CLLocationCoordinate2D = self.pref.location
         
         let jsonObject: AnyObject =
         [
-            "mode": self.mode,
-            "gpsCoords": [self.coordinate.latitude, self.coordinate.longitude],
+            "mode": self.pref.mode,
+            "gpsCoords": [coordinate.latitude, coordinate.longitude,],
             "from": ["name": "Joe", "num": "+447967965870"],
             "numbersToCall":
             [

@@ -10,21 +10,27 @@ import UIKit
 
 class myTableViewController2: UITableViewController {
 
-  @IBOutlet weak var phone1: UITextField!
-  @IBOutlet weak var phone2: UITextField!
-  @IBOutlet weak var phone3: UITextField!
+    @IBOutlet weak var phone1: UITextField!
+    @IBOutlet weak var phone2: UITextField!
+    @IBOutlet weak var phone3: UITextField!
   
-  @IBOutlet weak var name1: UITextField!
-  @IBOutlet weak var name2: UITextField!
-  @IBOutlet weak var name3: UITextField!
+    @IBOutlet weak var name1: UITextField!
+    @IBOutlet weak var name2: UITextField!
+    @IBOutlet weak var name3: UITextField!
+    
+    var pref:Preferences = Preferences()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        name1.text = pref.friends["name1"]
+        name2.text = pref.friends["name2"]
+        name3.text = pref.friends["name3"]
+        
+        phone1.text = pref.friends["phone1"]
+        phone2.text = pref.friends["phone2"]
+        phone2.text = pref.friends["phone3"]
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,37 +40,13 @@ class myTableViewController2: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 0
-    }
-
-    override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return 0
-    }
-
-    /*
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
         // Return NO if you do not want the specified item to be editable.
         return true
     }
-    */
 
-    /*
+
     // Override to support editing the table view.
     override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         if editingStyle == .Delete {
@@ -74,31 +56,18 @@ class myTableViewController2: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView!, moveRowAtIndexPath fromIndexPath: NSIndexPath!, toIndexPath: NSIndexPath!) {
-
+    
+    func viewWillDisappear ()
+    {
+        pref.friends["name1"] = name1.text
+        pref.friends["name2"] = name2.text
+        pref.friends["name3"] = name3.text
+        
+        pref.friends["phone1"] = phone1.text
+        pref.friends["phone2"] = phone2.text
+        pref.friends["phone3"] = phone3.text
+        
     }
-    */
 
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView!, canMoveRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -10,6 +10,7 @@
 		39064D6519B28E4700B63C86 /* myViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39064D6419B28E4700B63C86 /* myViewController2.swift */; };
 		39064D6719B2981A00B63C86 /* myTableViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39064D6619B2981A00B63C86 /* myTableViewController2.swift */; };
 		39064D6919B2B25800B63C86 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39064D6819B2B25800B63C86 /* CoreLocation.framework */; };
+		39064D6D19B3001B00B63C86 /* preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39064D6C19B3001B00B63C86 /* preferences.swift */; };
 		792DAF6D19B22F2700969CBB /* Call friends.svg in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6919B22F2700969CBB /* Call friends.svg */; };
 		792DAF6E19B22F2700969CBB /* Close call.svg in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6A19B22F2700969CBB /* Close call.svg */; };
 		792DAF6F19B22F2700969CBB /* Info settings.svg in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6B19B22F2700969CBB /* Info settings.svg */; };
@@ -43,6 +44,7 @@
 		39064D6419B28E4700B63C86 /* myViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myViewController2.swift; sourceTree = "<group>"; };
 		39064D6619B2981A00B63C86 /* myTableViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myTableViewController2.swift; sourceTree = "<group>"; };
 		39064D6819B2B25800B63C86 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		39064D6C19B3001B00B63C86 /* preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = preferences.swift; sourceTree = "<group>"; };
 		792DAF6919B22F2700969CBB /* Call friends.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Call friends.svg"; sourceTree = "<group>"; };
 		792DAF6A19B22F2700969CBB /* Close call.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Close call.svg"; sourceTree = "<group>"; };
 		792DAF6B19B22F2700969CBB /* Info settings.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Info settings.svg"; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				792DAF6C19B22F2700969CBB /* Pre-recorded.svg */,
 				7933DE5019B21C6B00CE303A /* Supporting Files */,
 				7973E1DA19B2619C00644BA8 /* CallQueue.swift */,
+				39064D6C19B3001B00B63C86 /* preferences.swift */,
 			);
 			path = "Uh oh!";
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39064D6D19B3001B00B63C86 /* preferences.swift in Sources */,
 				7933DE5519B21C6B00CE303A /* ViewController.swift in Sources */,
 				39064D6519B28E4700B63C86 /* myViewController2.swift in Sources */,
 				39064D6719B2981A00B63C86 /* myTableViewController2.swift in Sources */,
