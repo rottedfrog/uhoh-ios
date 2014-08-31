@@ -16,9 +16,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var curLocation: UILabel!
     var locationManager:CLLocationManager!
+    var coordinate:CLLocationCoordinate2D!
+    var mode:String = "alert"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.locationManager = CLLocationManager()
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.startUpdatingLocation()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,13 +48,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     
     @IBAction func Worry(sender: AnyObject) {
-        self.locationManager = CLLocationManager()
-        self.locationManager.delegate = self
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.startUpdatingLocation()
+        self.sendBackupData()
     }
     
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
+        
         CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: {(placemarks, error)->Void in
             
             if error != nil {
@@ -56,6 +62,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             
             if placemarks.count > 0 {
                 let pm = placemarks[0] as CLPlacemark
+                self.coordinate = manager.location.coordinate
                 self.displayLocationInfo(pm)
             } else {
                 println("Problem with the data received from geocoder")
@@ -69,7 +76,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func displayLocationInfo(placemark: CLPlacemark) {
         
         //stop updating location to save battery life
-        //locationManager.stopUpdatingLocation()
+        locationManager.stopUpdatingLocation()
         var res = " "
         if placemark.thoroughfare != nil {res += placemark.thoroughfare + ", "}
         if placemark.subThoroughfare != nil {res += placemark.subThoroughfare + ", "}
@@ -89,6 +96,55 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
         println("Error while updating location " + error.localizedDescription)
+    }
+    
+    
+    func sendBackupData(){
+        // create the request & response
+        var request = NSMutableURLRequest(URL: NSURL(string: "http://uhoh.herokuapp.com/uhoh"), cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData, timeoutInterval: 5)
+        var response: NSURLResponse?
+        var error: NSError?
+        
+        let jsonObject: AnyObject =
+        [
+            "mode": self.mode,
+            "gpsCoords": [self.coordinate.latitude, self.coordinate.longitude],
+            "from": ["name": "Joe", "num": "+447967965870"],
+            "numbersToCall":
+            [
+                ["name": "joe", "num": "+447967965870"],
+                ["name": "joe", "num": "+447967965870"],
+                ["name": "joe", "num": "+447967965870"]
+            ]
+        ]
+        func JSONStringify(jsonObj: AnyObject) -> String {
+            var e: NSError?
+            let jsonData: NSData! = NSJSONSerialization.dataWithJSONObject(
+                jsonObj,
+                options: NSJSONWritingOptions(0),
+                error: &e)
+            if e != nil {
+                return ""
+            } else {
+                return NSString(data: jsonData, encoding: NSUTF8StringEncoding)
+            }
+        }
+        let jsonString = JSONStringify(jsonObject)
+        println(jsonString)
+        request.HTTPBody = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
+        request.HTTPMethod = "POST"
+        request.setValue("application/json;charset=UTF-8", forHTTPHeaderField: "Content-Type")
+        
+        
+        // send the request
+        NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: &error)
+        
+        // look at the response
+        if let httpResponse = response as? NSHTTPURLResponse {
+            println("HTTP response: \(httpResponse.statusCode)")
+        } else {
+            println("No HTTP response")
+        }
     }
     
     

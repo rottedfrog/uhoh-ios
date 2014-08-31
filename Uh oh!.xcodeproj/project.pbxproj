@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		39064D6519B28E4700B63C86 /* myViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39064D6419B28E4700B63C86 /* myViewController2.swift */; };
 		39064D6719B2981A00B63C86 /* myTableViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39064D6619B2981A00B63C86 /* myTableViewController2.swift */; };
+		39064D6919B2B25800B63C86 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39064D6819B2B25800B63C86 /* CoreLocation.framework */; };
 		792DAF6D19B22F2700969CBB /* Call friends.svg in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6919B22F2700969CBB /* Call friends.svg */; };
 		792DAF6E19B22F2700969CBB /* Close call.svg in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6A19B22F2700969CBB /* Close call.svg */; };
 		792DAF6F19B22F2700969CBB /* Info settings.svg in Resources */ = {isa = PBXBuildFile; fileRef = 792DAF6B19B22F2700969CBB /* Info settings.svg */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		39064D6419B28E4700B63C86 /* myViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myViewController2.swift; sourceTree = "<group>"; };
 		39064D6619B2981A00B63C86 /* myTableViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myTableViewController2.swift; sourceTree = "<group>"; };
+		39064D6819B2B25800B63C86 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		792DAF6919B22F2700969CBB /* Call friends.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Call friends.svg"; sourceTree = "<group>"; };
 		792DAF6A19B22F2700969CBB /* Close call.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Close call.svg"; sourceTree = "<group>"; };
 		792DAF6B19B22F2700969CBB /* Info settings.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Info settings.svg"; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39064D6919B2B25800B63C86 /* CoreLocation.framework in Frameworks */,
 				792DAF7E19B2337500969CBB /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +85,7 @@
 		7933DE4419B21C6A00CE303A = {
 			isa = PBXGroup;
 			children = (
+				39064D6819B2B25800B63C86 /* CoreLocation.framework */,
 				792DAF7D19B2337500969CBB /* AVFoundation.framework */,
 				792DAF7B19B2332900969CBB /* CoreAudio.framework */,
 				792DAF7919B2331D00969CBB /* CoreTelephony.framework */,
