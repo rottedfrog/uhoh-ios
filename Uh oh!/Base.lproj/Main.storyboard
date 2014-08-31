@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kWn-xZ-KJK">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
     <scenes>
         <!--Preferences-->
         <scene sceneID="SGJ-dG-BjN">
             <objects>
-                <tableViewController id="tmb-Y0-glb" sceneMemberID="viewController">
+                <tableViewController id="tmb-Y0-glb" customClass="myTableViewController2" customModule="Uh_oh_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="eVY-Ga-aJO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,6 +222,14 @@
                         <size key="portraitSize" width="320" height="568"/>
                         <size key="landscapeSize" width="568" height="320"/>
                     </simulatedScreenMetrics>
+                    <connections>
+                        <outlet property="name1" destination="bhD-WM-qM4" id="g1J-Jh-iLt"/>
+                        <outlet property="name2" destination="x7X-5b-SjB" id="J69-DG-QA4"/>
+                        <outlet property="name3" destination="c3V-6Z-1zi" id="BrU-6r-BLl"/>
+                        <outlet property="phone1" destination="pyM-nI-0tX" id="0Zo-Fy-LRT"/>
+                        <outlet property="phone2" destination="9SJ-nx-NPc" id="Gd0-XT-hMI"/>
+                        <outlet property="phone3" destination="FTE-dR-YW8" id="1q6-pz-uUX"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ih-f8-Z0D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

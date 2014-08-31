@@ -10,6 +10,13 @@ import UIKit
 
 class myTableViewController2: UITableViewController {
 
+  @IBOutlet weak var phone1: UITextField!
+  @IBOutlet weak var phone2: UITextField!
+  @IBOutlet weak var phone3: UITextField!
+  
+  @IBOutlet weak var name1: UITextField!
+  @IBOutlet weak var name2: UITextField!
+  @IBOutlet weak var name3: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
