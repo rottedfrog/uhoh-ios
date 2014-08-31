@@ -20,6 +20,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.locationManager = CLLocationManager()
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.startUpdatingLocation()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,13 +44,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     
     @IBAction func Worry(sender: AnyObject) {
-        self.locationManager = CLLocationManager()
-        self.locationManager.delegate = self
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.startUpdatingLocation()
+        self.sendBackupData()
     }
     
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
+        
         CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: {(placemarks, error)->Void in
             
             if error != nil {
@@ -54,6 +58,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             
             if placemarks.count > 0 {
                 let pm = placemarks[0] as CLPlacemark
+                self.coordinate = manager.location.coordinate
                 self.displayLocationInfo(pm)
             } else {
                 println("Problem with the data received from geocoder")
@@ -67,7 +72,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func displayLocationInfo(placemark: CLPlacemark) {
         
         //stop updating location to save battery life
-        //locationManager.stopUpdatingLocation()
+        locationManager.stopUpdatingLocation()
         var res = " "
         if placemark.thoroughfare != nil {res += placemark.thoroughfare + ", "}
         if placemark.subThoroughfare != nil {res += placemark.subThoroughfare + ", "}
