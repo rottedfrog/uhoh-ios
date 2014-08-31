@@ -11,6 +11,8 @@
 		39064D6719B2981A00B63C86 /* myTableViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39064D6619B2981A00B63C86 /* myTableViewController2.swift */; };
 		39064D6919B2B25800B63C86 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39064D6819B2B25800B63C86 /* CoreLocation.framework */; };
 		39B93EC419B316FE00453DDC /* preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B93EC319B316FE00453DDC /* preferences.swift */; };
+		39B93EC819B3289700453DDC /* settings_filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B93EC719B3289700453DDC /* settings_filled-25.png */; };
+		39B93ECA19B328CA00453DDC /* info-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B93EC919B328CA00453DDC /* info-25.png */; };
 		792DAF7E19B2337500969CBB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792DAF7D19B2337500969CBB /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		7933DE5319B21C6B00CE303A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7933DE5219B21C6B00CE303A /* AppDelegate.swift */; };
 		7933DE5519B21C6B00CE303A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7933DE5419B21C6B00CE303A /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 		39064D6619B2981A00B63C86 /* myTableViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myTableViewController2.swift; sourceTree = "<group>"; };
 		39064D6819B2B25800B63C86 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		39B93EC319B316FE00453DDC /* preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = preferences.swift; sourceTree = "<group>"; };
+		39B93EC719B3289700453DDC /* settings_filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings_filled-25.png"; sourceTree = "<group>"; };
+		39B93EC919B328CA00453DDC /* info-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-25.png"; sourceTree = "<group>"; };
 		792DAF7919B2331D00969CBB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		792DAF7B19B2332900969CBB /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		792DAF7D19B2337500969CBB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -121,6 +125,8 @@
 		7933DE5019B21C6B00CE303A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				39B93EC919B328CA00453DDC /* info-25.png */,
+				39B93EC719B3289700453DDC /* settings_filled-25.png */,
 				796D704F19B30F9500FDA091 /* delete_message-128.png */,
 				796D704D19B30DEE00FDA091 /* chat-128.png */,
 				796D704B19B30DCA00FDA091 /* missed_call-128.png */,
@@ -231,6 +237,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7933DE5819B21C6B00CE303A /* Main.storyboard in Resources */,
+				39B93ECA19B328CA00453DDC /* info-25.png in Resources */,
+				39B93EC819B3289700453DDC /* settings_filled-25.png in Resources */,
 				7933DE5A19B21C6B00CE303A /* Images.xcassets in Resources */,
 				7995E29C19B29D6700CE5CB7 /* Pre-recording2 - loop.mp3 in Resources */,
 				796D704C19B30DCA00FDA091 /* missed_call-128.png in Resources */,
